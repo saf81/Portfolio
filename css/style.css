@@ -15,6 +15,9 @@ body {
 .dark .triangle path {
     fill: #FFFFFF;
 }
+.dark .triangle-form path {
+    fill: #FFFFFF;
+}
 .dark .social, 
 .dark .steps-item,
 .dark .about-title, 
@@ -613,6 +616,25 @@ header {
     text-transform: uppercase;
     border-bottom: 1px solid #F3F2F0;
     line-height: 150%;
+}
+.form-title p {
+    position: relative;
+    z-index: 3;
+    top: -303px;
+}
+.circle-form {
+    width: 300px;
+    height: 300px;
+    left: -159px;
+    top: calc(50% - 150px);
+    z-index: 1;
+    position: relative;
+}
+.triangle-form {
+    left: -491px;
+    top: -168px;
+    z-index: 2;
+    position: relative;
 }
 .form-description {
     font-size: 28px;
