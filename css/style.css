@@ -262,7 +262,7 @@ header {
 }
 .about {
     display: grid;
-    grid-template: 290px / repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .about-title {
     grid-column: 1/3;
@@ -478,6 +478,30 @@ header {
 .tech-item:hover .tech-image {
     filter: grayscale(0);
 }
+.html .tech-image {
+    width: 77px;
+}
+.css .tech-image {
+    width: 76px;
+}
+.js .tech-image {
+    width: 72px;
+}
+.jquery .tech-image {
+    width: 72px;
+}
+.bootstrap .tech-image {
+    width: 71px;
+}
+.php .tech-image {
+    width: 105px;
+}
+.vue .tech-image {
+    width: 81px;
+}
+.wp .tech-image {
+    width: 74px;
+}
 .ui-tooltip {
     background-color: #E31B1B;
     border-color: #E31B1B!important;
@@ -487,7 +511,7 @@ header {
     font-size: 10px;
     color: rgba(243, 242, 240, 0.8);
     max-width: 232px;
-    line-height: 150px;
+    line-height: 10px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -614,18 +638,20 @@ header {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    border-bottom: 1px solid #F3F2F0;
     line-height: 150%;
+    margin-bottom: -195px;
 }
 .form-title p {
     position: relative;
     z-index: 3;
     top: -303px;
+    right: 10px;
 }
 .circle-form {
     width: 300px;
     height: 300px;
     left: -159px;
+    bottom: -5px;
     top: calc(50% - 150px);
     z-index: 1;
     position: relative;
@@ -640,11 +666,13 @@ header {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    border-bottom: 1px solid #F3F2F0;
     padding-bottom: 30px;
+    padding-top: 8px;
 }
 .form-item {
     padding-top: 60px;
+    border-top: 1px solid #F3F2F0;
+    z-index: 1;
 }
 .form-social {
     display: flex;
@@ -653,6 +681,7 @@ header {
 }
 .form-social .nav-social {
     margin-bottom: 4px;
+    margin-left: -7px;
 }
 .nav-social .nav-item:first-child {
     padding-left: 0;
@@ -686,6 +715,11 @@ form input[type=submit] {
     color: #F3F2F0;
     padding: 21px 0;
     margin-bottom: 0;
+    transition: 0.2s ease;
+}
+form input[type=submit]:hover {
+    background: #EA0E00;
+    cursor: pointer;
 }
 form section {
     width: 100%;
@@ -722,6 +756,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding-top: 65px;
+    padding-right: 7px;
 }
 .footer-bottom {
     display: flex;
@@ -733,6 +768,8 @@ footer {
     margin: 0;
     color: rgba(243, 242, 240, 0.3);
     padding-bottom: 20px;
+    margin-left: -8px;
+    font-size: 12px;
 }
 .footer-link {
     color: rgba(243, 242, 240, 0.3);
@@ -743,4 +780,46 @@ footer {
 .footer-link:hover {
     color: rgba(243, 242, 240, 1);
     border-bottom: 1px solid rgba(243, 242, 240, 1);
+}
+@media (min-width:901px) {
+    .header-mobile {
+        display: none;
+    }
+}
+@media (max-width:900px) {
+    header {
+        display: none;
+    }
+    .header-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .menu {
+        background: transparent;
+        border: none;
+    }
+    .circle-main {
+        width: 200px;
+        height: 200px;
+        left: -99px;
+        top: calc(50% - 100px);
+    }
+    .triangle {
+        left: 0;
+        top: inherit;
+        bottom: -80px;
+        width: 48px;
+    }
+    .title-h1 {
+        font-size: 50px;
+    }
+    .main .title-h1 {
+        margin-top: 28px;
+    }
+    .name {
+        font-size: 20px;
+    }
 }
