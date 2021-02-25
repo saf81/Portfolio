@@ -80,6 +80,18 @@ body {
 .photo {
     margin-bottom: 93px;
     width: 100%;
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img {
+    width: 100%;
+    height: 310px;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    transform: translate(50%,50%);
+    object-fit: cover;
 }
 header {
     display: flex;
@@ -782,7 +794,14 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
+    }
+    .ui-dialog .ui-dialog-content {
+        position: absolute;
+        border: 0;
+        padding: .5em 1em;
+        background: none;
+        overflow: auto;
     }
     .menu {
         background: transparent;
@@ -1002,6 +1021,16 @@ footer {
     }
 }
 @media (max-width:550px) {
+    .photo,
+    .photo img {
+        height: 215px;
+    }
+    .photo {
+        margin-bottom: 64px;
+    }
+    .main .title-h1 {
+        margin-top: 22 px;
+    }
     .title-h1 {
         font-size: 28px;
         line-height: 34px;
@@ -1009,7 +1038,115 @@ footer {
     .circle-main {
         width: 135px;
         height: 135px;
-        left: -69px;
+        left: -50px;
         top: calc(50% - 67px);
+    }
+    .triangle {
+        bottom: -71px;
+        width: 29px;
+        left: 2px;
+    }
+    .circle-nav {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 27px;
+        top: calc(50% - 30px);
+    }
+    .social {
+        margin-top: 100px;
+        padding-bottom: 31px;
+    }
+    .skill {
+        padding-top: 30px;
+    }
+    .skill .title-h3 {
+        margin-bottom: 18px;
+    }
+    .skill-item {
+        padding-bottom: 10px;
+    }
+    .section-about {
+        padding-top: 0;
+    }
+    .about-title {
+        padding-bottom: 0;
+        border-bottom: none !important;
+    }
+    .about-description {
+        padding: 22px 10px 63px 9px;
+    }
+    .about-01 {
+        padding: 30px 20px 35px 9px;
+    }
+    .about-02 {
+        padding: 30px 10px 35px 12px;
+    }
+    .about-03 {
+        padding: 0px 20px 14px 9px;
+    }
+    .about-04 {
+        padding: 0 10px 14px 12px;
+    }
+    .section-steps {
+        padding-top: 44px;
+        padding-bottom: 61px;
+    }
+    .work-image,
+    .work-thumb {
+        height: 190px;
+    }
+    .project, .nav-social .nav-link,
+    .title-h3,
+    .steps-description,
+    .work-list,
+    .work-time,
+    .advantages-text,
+    .tarif-pack,
+    .tarif-list,
+    form input[type=submit] {
+        font-size: 12px;
+    }
+    .skill,
+    .about-item,
+    .nav-tabs,
+    .tarif-text,
+    .form label,
+    .form input,
+    form,
+    .footer-top .nav-link,
+    .footer-bottom p {
+        font-size: 10px;
+    }
+    .about-title, 
+    .about-description,
+    .steps-title,
+    .work-title,
+    .advantages-text,
+    .tarif-title,
+    .tarif-description,
+    .tarif-name,
+    .form-title,
+    .form-description {
+        font-size: 16px;
+    }
+    .tarif-price {
+        font-size: 22px;
+    }
+    .footer-top .nav-info {
+        font-size: 14px;
+    }
+    .circle-portfolio {
+        width: 197px;
+        height: 197px;
+        top: -220px;
+        right: 0;
+    }
+    .nav-tabs {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .tech-image {
+        width: 35px;
     }
 }
